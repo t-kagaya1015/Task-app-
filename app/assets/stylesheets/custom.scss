@@ -3,8 +3,43 @@
 
 /* 共通 */
 
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
   padding-top: 60px;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #fff;
 }
 
 section {
@@ -15,6 +50,15 @@ textarea {
   resize: vertical;
 }
 
+#top-main {
+    background-color: rgba(255,255,255,0);
+}
+
+#top-main-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
 .center {
   text-align: center;
 }
@@ -22,11 +66,17 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+.jumbotron h1, .jumbotron .h1 {
+    color: inherit;
+}
+
 
 /* タイポグラフィ */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  margin-top: 20px;
+  font-family: inherit;
 }
 
 h1 {
@@ -52,11 +102,89 @@ p {
 
 /* ヘッダー */
 
+#header {
+    background-color: blue;
+}
+
+.navbar-default {
+    border-color: #e7e7e7;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.navbar {
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+* {
+    box-sizing: border-box;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    background-color: #0000ff; 
+}
+li .header-list {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a {
+    background-color: #0000ff;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    background-color: transparent;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+}
+li .header-list:hover {
+    color: silver !important;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+li .header-list {
+    color: #fff !important;
+    font-weight: bold;
+}
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  font-style: italic;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
