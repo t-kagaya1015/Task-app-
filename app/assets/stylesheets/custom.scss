@@ -82,17 +82,20 @@ h1 {
 
 h1 {
     display: block;
+    
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
 }
 
-h1 {
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  background-color: #ffffff;
 }
 
 .row {
@@ -124,18 +127,20 @@ p {
 /* ヘッダー */
 
 #header {
+  　position: fixed;
     background-color: blue;
 }
 
 .navbar-default {
     border-color: #e7e7e7;
-    background-color: blue;
+    background-color: blue !important;
+    
 }
 
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
-  　background-color: blue;
+  　background-color: blue !important;
 }
 .navbar {
     min-height: 50px;
@@ -166,21 +171,20 @@ header, hgroup, mein, menu, nav, section, summary {
     position: relative;
     display: block;
     padding: 10px 15px;
-    background-color: #0000ff; 
+    background-color: #0000ff;
 }
 li .header-list {
     color: #fff !important;
     font-weight: bold;
 }
 
+
 a {
-    color: #fff;
+    color: #337ab7;
     text-decoration: none;
 }
 
-a {
-    background-color: #0000ff;
-}
+
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     background-color: blue;
 }
@@ -215,6 +219,7 @@ li .header-list {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  background-color: blue !important;
 }
 
 #logo:hover {
@@ -222,10 +227,20 @@ li .header-list {
   text-decoration: none;
 }
 
-div#header{
-background-color: #0000ff;
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+.dropdown-toggle {
+   color: #fff !important;
+}
+
+.dropdown-toggle:hover {
+   color: #silver !important;
+}
 
 /* デバッグウインドウ */
 
