@@ -160,25 +160,24 @@ p {
 
 #header {
   　position: fixed;
-    background-color: blue;
+    background-color: #0000ff;
 }
-
 .navbar-default {
     border-color: #e7e7e7;
     background-color: blue !important;
-    
 }
 
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
-  　background-color: blue !important;
+  　background-color: #0000ff !important;
 }
 .navbar {
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
+
 header, hgroup, mein, menu, nav, section, summary {
     display: block;
 }
