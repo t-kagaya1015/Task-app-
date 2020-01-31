@@ -30,6 +30,28 @@ section {
 textarea {
   resize: vertical;
 }
+/*　管理者　*/
+
+.alerlt-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+* {
+    box-sizing: border-box;
+}
+/*　管理者　ヘッダー　*/
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 
 #top-main {
     background-color: rgba(255,255,255,0);
@@ -151,8 +173,6 @@ p {
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -199,7 +219,7 @@ header, hgroup, mein, menu, nav, section, summary {
     line-height: 20px;
 }
 .nav>li>a {
-    position: relative;
+    position: right;
     display: block;
     padding: 10px 15px;
     background-color: #0000ff;
@@ -258,6 +278,9 @@ li .header-list {
 #logo:hover {
   color: #silver !important;
   text-decoration: none;
+}
+.container {
+    width:1170px;
 }
 
 .container {
