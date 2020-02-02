@@ -69,6 +69,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .center h1 {
   margin-bottom: 10px;
 }
+.jumbotron {
+ background-color: rgba(255,255,255,0); 
+}
 
 .jumbotron h1, .jumbotron .h1 {
     color: inherit;

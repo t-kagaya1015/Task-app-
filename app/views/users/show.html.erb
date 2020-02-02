@@ -4,7 +4,7 @@
   <head>
     <title>管理者 | Task App</title>
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="6vHitPqYTyYVVo0zFqgwI/TafEtEdR8Q8jyMTsjjd2elG8+MlbEw69qOO5ncX4bK4j2WrJ8NJa2ugjpPhMOUzA==" />
+<meta name="csrf-token" content="HWu+f4q/4++6uyk/XAkm5NMRW8Xdjr/ZwxEGrBKYG0873vuYLT/aAFhueJPjWnta3tkAa94WV/qsPCDDy1jrOg==" />
     <link rel="stylesheet" media="all" href="/assets/application-0e5d7c8cc18bd52eeabc1c5477d3b494997c763fe01630943b441776e7ad493d.css" data-turbolinks-track="reload" />
     <script src="/assets/application-b448791b18a9452cee489df10d734ac2ccdefa3cdd5db733d63988d121bd2408.js" data-turbolinks-track="reload"></script>
     <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><a class="header-list" href="/">トップ</a></li>
-            <li><%= link_to "利用者一覧", root_path, class: "header-list" %></li>
+            <li><a class="header-list" href="/users">利用者一覧</a></li>
           <li><a class="header-list" href="/users/1/tasks/new">タスク作成</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle header-list" data-toggle="dropdown" id="dropdown-title">
@@ -41,210 +41,6 @@
   </div>
 </header>
 
-<div class="container">
-      
-<h1>利用者一覧</h1>
-
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <div class="pagination"><ul class="pagination"><li class="prev previous_page disabled"><a href="#">前</a></li> <li class="active"><a href="/users?page=1">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li><a href="/users?page=5">5</a></li> <li><a href="/users?page=6">6</a></li> <li><a href="/users?page=7">7</a></li> <li><a href="/users?page=8">8</a></li> <li><a href="/users?page=9">9</a></li> <li class="next next_page "><a rel="next" href="/users?page=2">次</a></li></ul></div>
-    <table class="table table-condensed table-hover" id="table-users">
-      <thead>
-        <tr>
-          <th>名前</th>
-        </tr>
-      </thead>
-  
-      <tbody>
-          <tr>
-            <td>
-              <a href="/users/2">ゲスト管理者</a>
-                <span class="label label-primary label-user-division">管理者</span>
-            </td>
-            <td>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/15">中村 直樹</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="中村 直樹を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/15">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/18">高橋 優斗</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="高橋 優斗を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/18">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/20">清水 真央</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="清水 真央を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/20">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/21">木下 大地</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="木下 大地を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/21">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/22">林 悠</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="林 悠を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/22">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/23">武田 彩</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="武田 彩を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/23">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/24">藤井 千尋</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="藤井 千尋を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/24">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/25">遠藤 美優</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="遠藤 美優を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/25">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/27">三浦 隼人</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="三浦 隼人を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/27">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/28">清水 美羽</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="清水 美羽を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/28">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/29">小川 光</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="小川 光を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/29">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/30">前田 翔</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="前田 翔を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/30">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/33">原田 結衣</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="原田 結衣を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/33">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/34">佐野 莉子</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="佐野 莉子を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/34">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/36">内田 碧</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="内田 碧を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/36">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/37">岡田 優衣</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="岡田 優衣を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/37">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/38">金子 愛</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="金子 愛を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/38">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/39">前田 楓</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="前田 楓を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/39">削除</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="/users/41">今井 悠太</a>
-                <span class="label label-success label-user-division">一般</span>
-            </td>
-            <td>
-                <a data-confirm="今井 悠太を削除します。よろしいですか？" class="btn btn-danger btn-sm pull-right" rel="nofollow" data-method="delete" href="/users/41">削除</a>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-    <div class="pagination"><ul class="pagination"><li class="prev previous_page disabled"><a href="#">前</a></li> <li class="active"><a href="/users?page=1">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li><a href="/users?page=5">5</a></li> <li><a href="/users?page=6">6</a></li> <li><a href="/users?page=7">7</a></li> <li><a href="/users?page=8">8</a></li> <li><a href="/users?page=9">9</a></li> <li class="next next_page "><a rel="next" href="/users?page=2">次</a></li></ul></div>
-  </div>
-</div>
-
-      
-    </div>
-  </body>
-</html>
     <div class="container">
         <div class="alert alert-success">ログインしました。</div>
       
