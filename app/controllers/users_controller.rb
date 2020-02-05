@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
   
   def index
-  @users = User.all
+   @users = User.paginate(page: params[:page])
   end 
 
   def new
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = '新規作成に成功しました。'
-      redirect_to @user
+      redirect_to(root_url) unless corrent_user?(@user)
     else
       render :new
     end
