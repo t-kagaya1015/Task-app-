@@ -131,6 +131,7 @@ p {
 
 *:before, *:after {
     box-sizing: border-box;
+    background-color: white;
 }
 
 .row:after {
@@ -160,19 +161,30 @@ p {
   　position: fixed;
     background-color: #0000ff;
 }
+
 .navbar-default {
     border-color: #e7e7e7;
-    background-color: blue !important;
 }
 
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
-  　background-color: #0000ff !important;
 }
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    border-radius: 0;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 .navbar {
     min-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid transparent;
 }
 
@@ -263,6 +275,32 @@ li .header-list {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.line-content {
+    padding: 0px 5px !important;
+}
+
+td {
+    display: table-cell;
+    vertical-align: baseline;
+}
+
+table {
+    border-collapse: separate;
+    white-space: pre-wrap !important;
+    line-height: normal;
+    font-weight: normal;
+    font-size: initial;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    word-break: break-word;
+    font-family: monospace;
+    tab-size: 4;
+    border-spacing: 0px;
+    font-variant: normal;
+    background-color: white !important;
 }
 
 .dropdown-toggle {
