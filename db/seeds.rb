@@ -13,5 +13,5 @@ User.create!( name: "Sample User",
                  email: email,
                  password: password,
                  password_confirmation: password)
-                 
+
 end 
