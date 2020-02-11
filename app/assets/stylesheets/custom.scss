@@ -4,14 +4,14 @@
 /* 共通 */
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.428571429;
     color: #333333;
-    background-color: #fff ;
+    background-color: #ffffff !important;
 }
 .container {
     width: 1170px;
@@ -50,6 +50,24 @@ textarea {
 
 .jumbotron h1, .jumbotron .h1 {
     color: inherit;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+* {
+
+    box-sizing: border-box;
 }
 
 
@@ -159,7 +177,7 @@ p {
 
 #header {
   　position: fixed;
-    background-color: #0000ff;
+    background-color: blue;
 }
 
 .navbar-default {
@@ -184,7 +202,7 @@ p {
 
 .navbar {
     min-height: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid transparent;
 }
 
