@@ -10,6 +10,6 @@ module ApplicationHelper
   end
   
   def logged_in_user_name
-    User.find_by(id: current_user)
-  end
+    User.name
+  end 
 end
