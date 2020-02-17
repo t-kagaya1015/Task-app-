@@ -1,67 +1,45 @@
 <% provide(:title, "Top") %>
-<div class="center jumbotron">
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Top | Task App</title>
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="7Z5CmohP47F1oiYZkgoD1lHn3v6lepJTL1ijoe4lm88sdOgwKCxyjZlH2aO1RfpUAfoh7IMaxdLClHmp4eGqtQ==" />
-    <link rel="stylesheet" media="all" href="/assets/application-0e5d7c8cc18bd52eeabc1c5477d3b494997c763fe01630943b441776e7ad493d.css" data-turbolinks-track="reload" />
-    <script src="/assets/application-b448791b18a9452cee489df10d734ac2ccdefa3cdd5db733d63988d121bd2408.js" data-turbolinks-track="reload"></script>
-    <!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-  </script>
-<![endif]-->
-  </head>
-  <body>
-    <header class="navbar navbar-fixed-top navbar-default" id="header">
-  <div class="container">
-    <a id="logo" href="/">Task App</a>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="header-list" href="/">トップ</a></li>
-          <li><a class="header-list" href="/login">ログイン</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-    <div class="container">
-      
 <div class="row">
-  
   
   <div class="col-md-7">
     <div class="center jumbotron" id="top-main">
       <h1 id="top-main-title">TaskApp</h1>
       <p>TaskAppは簡易ToDo管理ツールです。</p>
       <p>↓↓初めてのご利用↓↓</p>
-        <%= link_to "アカウント作成", signup_path, class: "btn btn-success" %>
-        <div style="margin-top: 10px;">
-          <%= link_to "ゲストログイン（管理者権限)", root_path, class: "btn btn-danger" %> 
-          <%= link_to "ゲストログイン（一般権限)",root_path, class: "btn btn-warning" %>
-        </div>
+      <% if logged_in? %>
+        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success #{"disabled" unless current_user.admin?}" %>
+      <% else %>
+        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
+      <% end %>
     </div>
-  </div>                                
+   </div>
 
   <div class="col-md-4">
     <h1>ログイン</h1>
-    <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="0N245mL36cMukB3yDTavGraYCZ/UioFWT79y6sAnDqQyalOUKiGdx59WPbPlIlE5ucqGHLRzohZgs54jcleyLg==" />
-        <label class="label-form" for="session_email">メールアドレス</label>
-        <input class="form-control" type="email" name="session[email]" />
+    <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+      <% if logged_in? %>
+        <%= f.label :email, t("sessions.new.email"), class: "label-form" %>
+        <%= f.email_field :email, class: 'form-control', readonly: true %>
   
-        <label class="label-form" for="session_password">パスワード</label>
-        <input class="form-control" type="password" name="session[password]" />
+        <%= f.label :password, t("sessions.new.password"), class: "label-form" %>
+        <%= f.password_field :password, class: 'form-control', readonly: true %>
         
-        <label class="checkbox inline checkbox-login" for="remember-me">
-          <input name="session[remember_me]" type="hidden" value="0" /><input id="remember-me" type="checkbox" value="1" name="session[remember_me]" />
+        <%= f.submit "ログイン状態です", class: "btn btn-primary btn-block btn-form", disabled: "disabled" %>
+      <% else %>
+        <%= f.label :email, t("sessions.new.email"), class: "label-form" %>
+        <%= f.email_field :email, class: 'form-control' %>
+  
+        <%= f.label :password, t("sessions.new.password"), class: "label-form" %>
+        <%= f.password_field :password, class: 'form-control' %>
+        
+        <%= f.label :remember_me, class: "checkbox inline checkbox-login", for: "remember-me" do %>
+          <%= f.check_box :remember_me, id: "remember-me" %>
           <span>ログイン情報を記憶する</span>
-</label>        
-        <input type="submit" name="commit" value="ログイン" class="btn btn-primary btn-block btn-form" data-disable-with="ログイン" />
-</form>  </div>
+        <% end %>
+        
+        <%= f.submit "ログイン", class: "btn btn-primary btn-block btn-form" %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
-
-      
-    </div>
-  </body>
-</html>
